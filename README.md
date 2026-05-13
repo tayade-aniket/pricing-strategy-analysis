@@ -277,6 +277,6 @@ Distributed under the MIT License. See `LICENSE` for details.
 ## ✉️ Contact
 
 **Aniket Tayade** – Data Analyst / Pricing Specialist  
-📧 [E-Mail] tayadeanni@gmail.com | 🔗 [LinkedIn](https://www.linkedin.com/in/aniket-g-tayade/)
+📧 tayadeanni@gmail.com | 🔗 [LinkedIn](https://www.linkedin.com/in/aniket-g-tayade/)
 
 ---
