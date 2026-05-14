@@ -21,110 +21,78 @@ A **complete end‑to‑end analytics solution** that cleans raw retail data, me
 
 ```text
 pricing-strategy-analysis/
-│
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── main.py
-├── config.py
-├── Pricing_Strategy_Analysis.pbix
-│
 ├── data/
-│   │
-│   ├── raw/
-│   │   ├── retail_price_optimization.csv
-│   │   ├── superstore.csv
-│   │   └── product_retail_price_survey.csv
-│   │
-│   └── processed/
-│       ├── merged_dataset.csv
-│       ├── elasticity_output.csv
-│       ├── optimized_output.csv
-│       ├── competitor_analysis.csv
-│       ├── customer_segments.csv
-│       ├── sales_forecast.csv
-│       ├── retail_summary.csv
-│       └── survey_summary.csv
-│
+│   ├── merged/
+│   │   └── merged_dataset.csv
+│   ├── processed/
+│   │   ├── competitor_analysis.csv
+│   │   ├── customer_segments.csv
+│   │   ├── elasticity_output.csv
+│   │   ├── merged_dataset.csv
+│   │   └── optimized_output.csv
+│   └── raw/
+│       ├── Data_Dictionary.txt
+│       ├── retail_price_optimization.csv
+│       ├── retail_price_survey.csv
+│       ├── Retail_Prices_of_Products_dashboard.pbix
+│       └── superstore.csv
 ├── notebooks/
-│   │
+│   ├── .ipynb_checkpoints/
 │   ├── 01_Data_Loading_and_Preprocessing.ipynb
 │   ├── 02_Data_Merging_and_Feature_Engineering.ipynb
-│   ├── 03_Exploratory_Data_Analysis.ipynb
-│   ├── 04_Pricing_Elasticity_Analysis.ipynb
-│   ├── 05_Revenue_Optimization.ipynb
-│   ├── 06_Competitor_Analysis.ipynb
-│   ├── 07_Customer_Segmentation.ipynb
-│   ├── 08_Sales_Forecasting.ipynb
-│   └── 09_PowerBI_Data_Validation.ipynb
-│
+│   ├── 03_Pricing_Elasticity_Analysis.ipynb
+│   ├── 04_Revenue_Optimization.ipynb
+│   ├── 05_Competitor_Pricing_Analysis.ipynb
+│   ├── 06_Customer_Segmentation.ipynb
+│   ├── 07_Sales_Forecasting.ipynb
+│   ├── 08_SQL_Server_Integration.ipynb
+│   ├── 09_Advanced_Business_Insights.ipynb
+│   └── 10_EDA_and_Visualizations.ipynb
+├── powerbi dashboard/
+│   └── Pricing Dashboard.pbix
+├── reports/
 ├── sql/
-│   │
+│   ├── business_queries.sql
 │   ├── create_database.sql
 │   ├── create_tables.sql
-│   ├── views.sql
 │   ├── stored_procedures.sql
-│   └── analytical_queries.sql
-│
+│   └── views.sql
 ├── src/
-│   │
-│   ├── __init__.py
-│   ├── preprocessing.py
-│   ├── merge_datasets.py
-│   ├── elasticity.py
-│   ├── optimization.py
+│   ├── __pycache__/
 │   ├── competitor_analysis.py
+│   ├── config.py
 │   ├── customer_segmentation.py
-│   ├── forecasting.py
 │   ├── database.py
+│   ├── eda.py
+│   ├── elasticity.py
+│   ├── forecasting.py
+│   ├── merge_datasets.py
+│   ├── optimization.py
+│   ├── preprocessing.py
 │   └── utils.py
-│
 ├── visuals/
-│   │
-│   ├── charts/
-│   │   ├── revenue_by_category.png
-│   │   ├── profit_by_region.png
-│   │   ├── discount_vs_revenue.png
-│   │   ├── price_vs_units_sold.png
-│   │   ├── monthly_revenue_trend.png
-│   │   ├── top_10_products.png
-│   │   ├── competitor_price_gap.png
-│   │   ├── customer_segments.png
-│   │   ├── elasticity_analysis.png
-│   │   └── forecasting_trend.png
-│   │
-│   ├── powerbi_dashboard/
-│   │   ├── executive_summary.png
-│   │   ├── pricing_strategy_dashboard.png
-│   │   ├── customer_market_dashboard.png
-│   │   └── forecasting_optimization_dashboard.png
-│   │
-│   └── architecture/
-│       ├── project_architecture.png
-│       └── data_pipeline_flow.png
-│
-├── reports/
-│   │
-│   ├── Pricing_Strategy_Analysis_Report.docx
-│   ├── Executive_Summary.pdf
-│   └── Project_Presentation.pptx
-│
-├── dashboard_assets/
-│   │
-│   ├── icons/
-│   ├── themes/
-│   │   └── pricing_strategy_theme.json
-│   │
-│   └── templates/
-│       └── dashboard_wireframe.png
-│
-└── docs/
-    │
-    ├── business_problem_statement.md
-    ├── project_workflow.md
-    ├── kpi_definitions.md
-    ├── dashboard_documentation.md
-    └── deployment_guide.md
+├── architecture/
+│   ├── Data Pipeline Flow - visual selection.png
+│   └── Project Architecture - visual selection.png
+├── charts/
+│   ├── competitor_price_gap.png
+│   ├── customer_segments.png
+│   ├── discount_vs_revenue.png
+│   ├── monthly_revenue_trend.png
+│   ├── price_vs_units_sold.png
+│   ├── profit_by_region.png
+│   ├── revenue_by_category.png
+│   └── top_10_products.png
+├── dashboard_screenshots/
+│   ├── Customer.png
+│   ├── Forecasting.png
+│   ├── Home.png
+│   └── Pricing.png
+├── .gitignore
+├── generate_tree_unicode.py
+├── main.py
+├── README.md
+└── requirements.txt
 ```
 
 ---
@@ -205,6 +173,15 @@ The script will:
 
 ---
 
+## 💡 Key Use Cases
+
+1. **Dynamic Pricing Engine:** Automatically adjust prices based on competitor movements and historical price elasticity.
+2. **Promotional Campaign Targeting:** Utilize customer segmentation to offer customized discounts to highly price-sensitive clusters.
+3. **Inventory & Supply Chain Planning:** Leverage 30-day sales forecasts to optimize stock levels and prevent stockouts during peak demand periods.
+4. **Market Positioning Strategy:** Use competitor gap analysis to realign product pricing and ensure a competitive stance in the market.
+
+---
+
 ## 📊 Key Analytical Insights
 
 ### Revenue & Profitability
@@ -227,6 +204,24 @@ The script will:
 
 ### Trends
 ![Monthly Revenue Trend](visuals/charts/monthly_revenue_trend.png)
+
+---
+
+## 💻 Interactive PowerBI Dashboards
+
+Explore the strategic insights through our comprehensive, interactive PowerBI dashboards.
+
+### Home & Executive Summary
+![Home Dashboard](visuals/dashboard_screenshots/Home.png)
+
+### Pricing Strategy & Elasticity
+![Pricing Dashboard](visuals/dashboard_screenshots/Pricing.png)
+
+### Customer Segmentation
+![Customer Dashboard](visuals/dashboard_screenshots/Customer.png)
+
+### Sales Forecasting
+![Forecasting Dashboard](visuals/dashboard_screenshots/Forcasting.png)
 
 ---
 
